@@ -3,7 +3,7 @@
 
 ### A few notes
 #1 I used Google Chrome to scrape data from the web with Chrome Elements
-#2 Website 1 to be scraped: https://www.worldometers.info/population/countries-in-africa-by-population/
+#2 Website 1 to be scraped: https://index.edsurge.com/products/
 #3 When viewing a webpage in Chrome, you can see the underlying code using the Cmd+Option+C (Mac) or Ctrl+Shift+C (Windows)
 
 # this is part of the tidyverse package

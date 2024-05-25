@@ -1,4 +1,4 @@
-####  Code to scrape web data on EdSurge data
+####  Code to scrape org names from EdSurge site
 # https://index.edsurge.com/my_list/
 
 ### A few notes

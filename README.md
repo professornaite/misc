@@ -1,4 +1,7 @@
 # misc
-Miscellaneous documents
 
-Various editable files that can be useful for project management, research, or other tasks
+Miscellaneous lab documents and files
+
+  - Various editable files that can be useful for single tasks. 
+
+  - Tasks support project management, research, or other needs.

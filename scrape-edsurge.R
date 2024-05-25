@@ -23,9 +23,6 @@ ed.surge
 View(ed.surge)
 str(ed.surge) # check the structure of the object
 
-
-ed.surge %>% xml_ns() # check the namespace 
-
 # focus on body; list nodes inside the body of the page
 body_nodes <- ed.surge %>%
   html_node("body") %>%
@@ -46,7 +43,7 @@ header_nodes
 
 # use xml_find_all() to find all <> nodes in the body document 
 # we want to identify those nodes that have the class names we want
-## in this current case, we want <td>
+## in this current case, we want ?????? <td>
 
 odd <- ed.surge %>% 
   rvest::html_nodes('body') %>% 

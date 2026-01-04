@@ -1,0 +1,62 @@
+---
+title: "Title of your paper here"
+bibliography: template.bib
+author:
+  - "FirstName LastName"
+  - "Organization"
+csl: styles/apa.csl
+output:
+  word_document:
+    toc: false
+    reference_docx: styles/word-styles-reference.docx
+  pdf_document:
+    toc: false
+    toc_depth: 2
+    number_section: true 
+  html_document:
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    theme: flatly
+editor_options:
+  markdown:
+    wrap: sentence
+---
+
+
+```{r, include=F}
+knitr::opts_chunk$set(
+  echo = TRUE, # By default, hide code; set to TRUE to see code
+  fig.pos = 'th', # Places figures at top or here
+  out.width = '100%', dpi = 300, # Figure resolution and size
+  fig.env="figure"
+) # Latex figure environment
+
+options(knitr.table.format = "latex") # For kable tables to write LaTeX table directly
+
+here::i_am("TEMPLATE.Rmd")
+```
+
+\newpage
+
+# Abstract
+
+
+**Keywords**: 
+
+\newpage
+
+# Introduction
+
+\newpage
+
+## Notes
+
+1.  Note.
+
+2.  Note.
+
+\newpage
+
+## References
+

@@ -1,0 +1,45 @@
+/* --- Title box layout ---------------------------------------- */
+.title-box {
+  min-height: 4.5in;
+  padding-top: 3in;
+  padding-bottom: 0.25in;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* --- Title box typography ------------------------------------ */
+.title-box h1 {
+  font-size: 96pt;
+  margin-bottom: 0.2in;
+}
+
+.title-box h2 {
+  font-size: 48pt;
+  margin-bottom: 0.2in;
+}
+
+/* --- Author & affiliation lines ------------------------------ */
+.author-line {
+  font-size: 36pt;
+  margin-top: 0;
+  margin-bottom: 0.1in;
+}
+
+/* --- Section headers ----------------------------------------- */
+.section-title {
+  font-size: 48pt;
+}
+
+/* --- Body text ----------------------------------------------- */
+.post-body p {
+  font-size: 36pt;
+  line-height: 1.2;
+}
+
+/* --- Logos --------------------------------------------------- */
+.logo-left img,
+.logo-right img {
+  max-height: 4.5in;
+  width: auto;
+}

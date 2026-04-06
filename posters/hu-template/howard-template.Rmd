@@ -1,57 +1,93 @@
 ---
-title: "Your title here"
-subtitle: "Your subtitle here (can also remove this line)"
+title: "Title Goes Here"
+subtitle: "Your Subtitle Here"
 author: 
   - name: FirstName LastName
     affil: 1
-  - name:  CoAuthorFirst CoAuthorLast
-    affil: 2, 3
+  - name: CoAuthorFirst CoAuthorLast
+    affil: 2
+
 affiliation:
   - num: 1
-    address: Department of Study, College of Study
+    address: "Department, College or University Name"
   - num: 2
-    address: Department of Study, School of Study
-  - num: 3
-    address: Department of Study, College of Study
+    address: "Department, College or University Name"
+
 column_numbers: 3
-logoright_name: img/qs-logo.png
-logoleft_name: img/hu-logo.jpg
+
+logoright_name: "img/qs-logo.png"
+logoleft_name: "img/hu-logo.jpg"
+
 titlebox_borderwidth: "0.25cm"
+
 primary_colour: "#ffffff"
 secondary_colour: "#5F6062"
 accent_colour: "#E51937"
+
 titlebox_bordercol: "#003A63"
 title_textcol: "#003A63"
 author_textcol: "#003A63"
 affiliation_textcol: "#003A63"
+
 columnline_col: "#E51937"
 columnline_style: solid
+
 sectitle_textcol: "#ffffff"
 sectitle_bgcol: "#003A63"
 sectitle_bordercol: "#003A63"
 sectitle2_textcol: "#003A63"
+
 output: 
-  - posterdown::posterdown_html
+  posterdown::posterdown_html:
+    css: hu-poster.css
+
 bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, fig.width = 12, fig.height = 8)
-#install.packages("pak")
-#install.packages("posterdown")
-pak::pak('rstudio/pagedown')
-library(readr)
-library(dplyr)
+knitr::opts_chunk$set(
+  echo = FALSE,
+ # cache = FALSE,
+  fig.width = 4,
+  fig.height = 3,
+  dpi = 300
+)
+
+# Ensure required packages are installed and loaded
+if (!requireNamespace("posterdown", quietly = TRUE)) {
+  pak::pak("brentthorne/posterdown")
+}
+if (!requireNamespace("pagedown", quietly = TRUE)) {
+  pak::pak("rstudio/pagedown")
+}
+
+library(posterdown)
 library(tidyverse)
 library(ggplot2)
-library(scales) # For formatting axis labels
+library(scales)
 library(here)
 here::i_am("howard-template.Rmd") # if you change the name of your file, update this
 ```
 
+<style>
+@page {
+size: 48in 36in;
+margin: 0;
+}
+</style>
+
 ```{r, eval=F, include=FALSE}
-# do not remove; this line is to create the PDF version of your poster
-pagedown::chrome_print("howard-template.Rmd")
+# To render both HTML and PDF versions:
+rmarkdown::render("howard-template.Rmd")
+
+pagedown::chrome_print(
+  "howard-template.html",
+  output = "howard-template.pdf",
+  options = list(
+    paperWidth = 48, 
+    paperHeight = 36
+    )
+)
 ```
 
 # Abstract
@@ -74,9 +110,9 @@ This is some sample text. Lorem ipsum dolor sit amet, consectetur adipiscing eli
 
 # Methodology
 
-This is some sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+This is some sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
 
-## Data
+# Data
 
 This is some more sample text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
 
@@ -127,6 +163,6 @@ This is some concluding text. Lorem ipsum dolor sit amet, consectetur adipiscing
 
 # Acknowledgements
 
-These are the acknowledgements. This work was supporting by funding from the Alfred P. Sloan Foundation (Grant 2023-21062). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
+These are the acknowledgements. This work was supported by funding from the Alfred P. Sloan Foundation (Grant 2023-21062). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
 
 # References

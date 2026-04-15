@@ -1,29 +1,29 @@
 /* --- Title box layout ---------------------------------------- */
 .title-box {
-  min-height: 4.5in;
-  padding-top: 3in;
-  padding-bottom: 0.25in;
+  min-height: 3in;              /* more vertical space */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;      /* centers vertically */
+  align-items: center;          /* centers horizontally */
+  padding-top: 4in;               /* manual push */
+  padding-bottom: 4in;
+  text-align: center;
 }
 
 /* --- Title box typography ------------------------------------ */
 .title-box h1 {
   font-size: 96pt;
-  margin-bottom: 0.2in;
+  margin-bottom: 0.3in;
 }
 
 .title-box h2 {
   font-size: 48pt;
-  margin-bottom: 0.2in;
+  margin-bottom: 0.3in;
 }
 
-/* --- Author & affiliation lines ------------------------------ */
 .author-line {
   font-size: 36pt;
-  margin-top: 0;
-  margin-bottom: 0.1in;
+  margin-top: 0.2in;
 }
 
 /* --- Section headers ----------------------------------------- */
@@ -40,6 +40,6 @@
 /* --- Logos --------------------------------------------------- */
 .logo-left img,
 .logo-right img {
-  max-height: 4.5in;
+  max-height: 12in;
   width: auto;
 }

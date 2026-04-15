@@ -72,7 +72,7 @@ here::i_am("howard-template.Rmd") # if you change the name of your file, update 
 <style>
 @page {
 size: 48in 36in;
-margin: 0;
+margin: 6in;
 }
 </style>
 

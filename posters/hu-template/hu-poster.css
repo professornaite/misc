@@ -5,8 +5,8 @@
   flex-direction: column;
   justify-content: center;      /* centers vertically */
   align-items: center;          /* centers horizontally */
-  padding-top: 4in;               /* manual push */
-  padding-bottom: 4in;
+  padding-top: 0in;               /* manual push */
+  padding-bottom: 0in;
   text-align: center;
 }
 

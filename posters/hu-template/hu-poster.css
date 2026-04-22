@@ -1,9 +1,9 @@
 /* --- Title box layout ---------------------------------------- */
 .title-box {
-  min-height: 3in;              /* more vertical space */
+  min-height: 1in;              /* more vertical space */
   display: flex;
   flex-direction: column;
-  justify-content: center;      /* centers vertically */
+  justify-content: flex-end;      /* centers vertically */
   align-items: center;          /* centers horizontally */
   padding-top: 0in;               /* manual push */
   padding-bottom: 0in;
@@ -40,6 +40,6 @@
 /* --- Logos --------------------------------------------------- */
 .logo-left img,
 .logo-right img {
-  max-height: 12in;
-  width: auto;
+  width: 600px !important;
+  height: auto !important;
 }
